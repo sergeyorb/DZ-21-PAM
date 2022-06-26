@@ -4,7 +4,7 @@
   <li> Настроить стенд для выполнения домашнего задания 
     <li> Вариант Модуль pam_time
       <li> Вариант с выполнением скрипта при подключении пользователя
-        <li>
+        <li> Вариант Модуль pam_script
           <li>
 </ol>  
 
@@ -45,4 +45,20 @@
   <p>account required pam_exec.so /usr/local/bin/test_login.sh</p>
   <li>Создал скрипт /usr/local/bin/test_login.sh</li>
   <p>скрипт взял от сюда https://gist.github.com/dmitry-lyutenko/39bf8afe5d1f6fc2d48b09c325706495</p>
+</ul>
+
+# 5. Вариант Модуль pam_script
+<ul>
+  <li>Подключил репозиторий EPEL</li>
+  <p>yum -y install epel-release</p>
+  <li>Установил pam_script</li>
+  <p>yum install $pkg</p>
+  <li>Отредактировал файл /etc/pam.d/sshd</li>
+  <p>account required pam_nologin.so</p>
+  <p>account required pam_script.so /usr/local/bin/test_login.sh</p>
+  <li>Установить пакет nmap-ncat</li>
+  <p>yum install nmap-ncat</p>
+  <p>Открыл новую сессию под пользователем day и выполнил команду ncat -l -p 80</p>
+  
+  <li></li>
 </ul>
