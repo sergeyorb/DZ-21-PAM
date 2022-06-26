@@ -60,6 +60,12 @@
   <p>yum install nmap-ncat</p>
   <p>Открыл новую сессию под пользователем day и выполнил команду ncat -l -p 80</p>
   ![image](https://user-images.githubusercontent.com/98658046/175825086-d14f8f35-cc37-4e1a-baa5-8c8fe86c53b0.png)
-
-  <li></li>
+  <li>Модуль pam_cap</li>
+  <p>Отредактировал файл /etc/pam.d/sshd</p>
+  <p>auth include postlogin</p>
+  <p>auth required pam_cap.so</p>
+  <li>Права пользователя day</li>
+  <p>Создал файл /etc/security/capability.conf и добавил в него строку cap_net_bind_service day</p>
+  <p>Выдал права программе ncat</p>
+  <p>sudo setcap cap_net_bind_service=ei/usr/bin/ncat</p>
 </ul>
