@@ -27,7 +27,7 @@
 
 # 3. PAM
 <ul>
-  <li>pam_time</li>
+  <li>Модуль pam_time</li>
   <p>В конец файла /etc/security/time.conf добавил следующие строки</p>
   <p>*;*;day;Al0800-2000
   <p>*;*;night;!Al0800-2000
