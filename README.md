@@ -2,7 +2,7 @@
 <ol> 
   <li>Создать сденд для выполнения домашнего задания
   <li> Настроить стенд для выполнения домашнего задания 
-    <li> PAM
+    <li> Вариант Модуль pam_time
       <li>
         <li>
           <li>
@@ -25,11 +25,15 @@
   <p>sudo passwd friday</p>
 </ul>  
 
-# 3. PAM
+# 3. Вариант Модуль pam_time
 <ul>
-  <li>Модуль pam_time</li>
+  <li>Отредактировал time.conf</li>
   <p>В конец файла /etc/security/time.conf добавил следующие строки</p>
-  <p>*;*;day;Al0800-2000
-  <p>*;*;night;!Al0800-2000
-  <p>*;*;friday;Fr
+  <p>*;*;day;Al0800-2000</p>
+  <p>*;*;night;!Al0800-2000</p>
+  <p>*;*;friday;Fr</p>
+  <li>Подключил модуль PAM</li>
+  <p>Отредактировал файл /etc/pam.d/sshd</p>
+  <p>account required pam_nologin.so</p>
+  <p>account required pam_time.so</p>
 </ul>
