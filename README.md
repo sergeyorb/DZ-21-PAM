@@ -37,6 +37,7 @@
   <p>account required pam_nologin.so</p>
   <p>account required pam_time.so</p>
 </ul>
+
 # 4. Вариант с выполнением скрипта при подключении пользователя
 <ul>
   <li>Отредактировал файл /etc/pam.d/sshd</li>
