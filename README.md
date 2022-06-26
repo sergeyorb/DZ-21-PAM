@@ -59,6 +59,7 @@
   <li>Установить пакет nmap-ncat</li>
   <p>yum install nmap-ncat</p>
   <p>Открыл новую сессию под пользователем day и выполнил команду ncat -l -p 80</p>
-  
+  ![image](https://user-images.githubusercontent.com/98658046/175825086-d14f8f35-cc37-4e1a-baa5-8c8fe86c53b0.png)
+
   <li></li>
 </ul>
